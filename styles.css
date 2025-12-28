@@ -181,8 +181,7 @@
     text-align: center;
     font-weight: 600;
     transform: translateY(0);
-    margin-left: 20px;
-    margin-right: 5px;
+    
     }
    .button-hdn:hover{
    transform: translateY(-5px);
@@ -199,8 +198,7 @@
     text-align: center;
     font-weight: 600;
     transform: translateY(0);
-    margin-left: 5px;
-    margin-right: 5px;
+    
     }
    .button-video:hover{
    transform: translateY(-5px);
@@ -208,8 +206,12 @@
    }
   .div-button{
     display: flex;
+    gap: 20px;
+    justify-content: center;
+    
   }
 }
+
 
 
 
