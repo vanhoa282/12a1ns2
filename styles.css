@@ -156,11 +156,16 @@
   .menu-mobile {
     display: flex;
   }
-  .thongbao{
- border-top: 4px solid #00CD00; 
+  .thongbao {
+    border-top: 4px solid #00CD00;
     border-radius: 10px;
     box-shadow: 1px 2px 4px rgb(0,0,0,0.1);
- height: 70px; }
-  width: 50%;
+    height: 120px; 
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
+
 
