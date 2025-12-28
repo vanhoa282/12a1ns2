@@ -187,10 +187,12 @@
    transition: all 0.2s;
     }
   .div-button{
+    display: flex;
     margin-left: auto;
     margin-right: auto;
   }
 }
+
 
 
 
