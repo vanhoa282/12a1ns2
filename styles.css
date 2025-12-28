@@ -185,11 +185,28 @@
    .button-hdn:hover{
    transform: translateY(-5px);
    transition: all 0.2s;
+   }
+    .button-video{
+   box-shadow: 10px 10px 5px rgb( 0,250,0,0.1);
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border: 2px soild #27ae60;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    transform: translateY(0);
     }
+   .button-video:hover{
+   transform: translateY(-5px);
+   transition: all 0.2s;
+   }
   .div-button{
     display: flex;
   }
 }
+
 
 
 
