@@ -156,6 +156,10 @@
   .menu-mobile {
     display: flex;
   }
+    .hangtb {
+    
+    display: flex;
+    }
   .thongbao {
     border-top: 4px solid #00CD00;
     border-radius: 10px;
@@ -167,5 +171,6 @@
     text-align: center;
   }
 }
+
 
 
