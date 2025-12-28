@@ -172,7 +172,7 @@
   }
     .button-hdn{
     box-shadow: 10px 10px 5px rgb( 0,250,0,0.1);
-    width: 50%;
+    width: 100px;
     height: 50px;
     background-color: #27ae60;
     border: none;
@@ -190,6 +190,7 @@
     display: flex;
   }
 }
+
 
 
 
