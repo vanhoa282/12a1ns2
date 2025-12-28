@@ -170,7 +170,24 @@
     margin-right: auto;
     text-align: center;
   }
+    .button-hdn{
+    box-shadow: 10px 10px 5px rgb( 0,250,0,0.1);
+    width: 50%;
+    height: 50px;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    transform: translateY(0);
+    }
+   .button-hdn:hover{
+   transform: translateY(-5px);
+   transition: all 0.2s;
+    }
 }
+
 
 
 
