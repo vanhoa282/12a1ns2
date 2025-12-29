@@ -370,8 +370,24 @@ margin-bottom: 15px;
             height: 100%;
             border-radius:10px;
         }
-  
+    .inline-tiilevd {
+    display: inline-block;
+    border-bottom: 3px solid green;
+    border-bottom-left-radius:10px;
+    margin-bottom: 10px;
+    
+  }
+  .videos{
+    display: flex;
+    justify-content: center;
+     width: 100%;
+ border-radius: 10px;
+ margin-right: 5px;
+ box-shadow: 2px 2px 4px rgb(0,0,0,0.1);
+    
+  }
 }
+
 
 
 
