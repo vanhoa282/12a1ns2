@@ -335,6 +335,7 @@ margin-bottom: 15px;
    }
   .inline-hd{
     border-right: 4px solid #00CD00;
+    margin-bottom: 10px;
   }
   .div-taiche{
     display: flex;
@@ -351,6 +352,7 @@ margin-bottom: 15px;
   }
   
 }
+
 
 
 
