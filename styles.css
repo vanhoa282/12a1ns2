@@ -146,8 +146,6 @@
   }
   .inline {
     border-left: 4px solid #00CD00;
-    margin-right: auto;
-    margin-left: auto;
   }
   .div-thuctrang-mobile{
     display: flex;
@@ -335,6 +333,9 @@ margin-bottom: 15px;
      .giaiphap4:hover .img4{
      bottom: 0;
    }
+  .inline-hd{
+    border-right: 4px solid #00CD00;
+  }
   .div-taiche{
     display: flex;
     margin-bottom: 10px;
@@ -350,6 +351,7 @@ margin-bottom: 15px;
   }
   
 }
+
 
 
 
