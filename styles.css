@@ -531,6 +531,7 @@ margin-bottom: 15px;
     display: flex;
     justify-content: center;
      width: 100%;
+    margin-bottom: 20px;
  border-radius: 10px;
  margin-right: 5px;
  box-shadow: 2px 2px 4px rgb(0,0,0,0.1);
@@ -671,6 +672,7 @@ margin-bottom: 15px;
 }
   
         }
+
 
 
 
