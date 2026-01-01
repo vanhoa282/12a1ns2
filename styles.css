@@ -250,6 +250,17 @@ body{
   .mobilehvh{
     display: none;
   }
+              .footer-top {
+                flex-direction: row;
+            }
+            
+            .footer-info, .footer-contact, .footer-members {
+                width: auto;
+            }
+            
+            .member {
+                width: 48%;
+            }
 }
 
 @media only screen and (max-width: 768px) {
@@ -620,7 +631,39 @@ margin-bottom: 15px;
     border: none;
     outline: none;
   }
+              .footer {
+                padding: 20px;
+            }
+            
+            .footer-top {
+                flex-direction: column;
+            }
+            
+            .footer-info, .footer-contact, .footer-members {
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .social-links {
+                margin-top: 15px;
+            }
+            
+            .social-link {
+                margin: 0 5px;
+                margin-left: 0;
+            }
+            
+            .member {
+                width: 100%;
+            }
+        }
   
+
 
 
 
