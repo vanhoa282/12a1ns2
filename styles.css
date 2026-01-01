@@ -666,12 +666,13 @@ margin-bottom: 15px;
                 width: 100%;
             }
   .div-all{
-  margin-left: 5px;
-    margin-right: 5px;
+  margin-left: 5px !important;
+    margin-right: 5px !important;
   
 }
   
         }
+
 
 
 
