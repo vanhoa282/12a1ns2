@@ -1,4 +1,6 @@
-
+html{
+  scroll-behavior: smooth;
+}
   
 body{
   background-color: #fafafa ;
@@ -672,6 +674,7 @@ margin-bottom: 15px;
 }
   
         }
+
 
 
 
