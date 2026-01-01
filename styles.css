@@ -2,8 +2,6 @@
   
 body{
   background-color: #fafafa ;
- margin: 0;
-  padding: 0;
 }
 
         .footer {
@@ -633,6 +631,10 @@ margin-bottom: 15px;
     border: none;
     outline: none;
   }
+  .div-all{
+  margin: 0;
+  padding: 0;
+  }
               .footer {
                 padding: 20px;
             }
@@ -665,6 +667,7 @@ margin-bottom: 15px;
             }
         }
   
+
 
 
 
