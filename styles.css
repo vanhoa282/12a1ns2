@@ -799,4 +799,15 @@ textarea:focus {
   .member {
     width: 48%;
   }
+  .video-section {
+			flex: 45%;
+		  }
+		  
+  .content-section {
+			flex: 55%;
+		  }
+	 .desktop-layout .videos {
+			height: 300px;
+		  }
 }
+
