@@ -1,1 +1,891 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giải Pháp Môi Trường - Nhóm 2 - 12A1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+<style>
+  .social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-mobile a:hover {
+  background-color: #f8fff8;
+  color: #2e8b57;
+}
+
+.thongbao:hover {
+  transform: translateY(-3px);
+  box-shadow: 1px 4px 8px rgba(0,0,0,0.15);
+}
+
+.giaiphap1:hover,
+.giaiphap2:hover,
+.giaiphap3:hover,
+.giaiphap4:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 5px 8px rgba(0,0,0,0.15);
+}
+
+.imgtaiche:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.problem-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.problem-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.marquee-container {
+  background-color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.solution-banner {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.solution-banner h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.solution-banner p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.content-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.members-details {
+  width: 100%;
+}
+
+.member-detail {
+  margin-bottom: 10px;
+}
+
+.member-summary {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s;
+  position: relative;
+  padding-right: 40px;
+}
+
+.member-summary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: white;
+}
+
+.member-summary::after {
+  content: '+';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.member-detail[open] .member-summary::after {
+  content: '−';
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.member-content {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 8px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: none;
+  margin-top: -1px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.member-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.member-role {
+  font-size: 14px;
+  color: #c1e1c1;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.member-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Thêm CSS cho trang giải pháp */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.solution-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.solution-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.solution-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.solution-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.step-list {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.step-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.benefit-tag {
+  display: inline-block;
+  background-color: #e8f5e9;
+  color: #27ae60;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.action-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.action-btn:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+}
+
+.solution-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.stat-badge {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.stat-text {
+  font-size: 12px;
+  color: #777;
+}
+
+.personal-action {
+  background-color: #f8fff8;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #2e8b57;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.action-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.action-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.check-icon {
+  color: #27ae60;
+  margin-right: 8px;
+}
+
+.action-item h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.action-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+</style>
+</head>
+<body>
+<div class="pc-container">
+  <a class="class-img" href="/">
+    <img class="class-img" src="https://i.imgur.com/ZuVJwyk.jpeg" alt="logo">
+  </a>
+  
+  <div class="pc-menu">
+    <a href="trangchu.html" style="text-decoration: none;">
+      <h4 class="text-pc">Trang Chủ</h4>
+    </a>
+    <a href="vande.html" style="text-decoration: none;">
+      <h4 class="text-pc">Vấn Đề</h4>
+    </a>
+    <a href="giaiphap.html" style="text-decoration: none;">
+      <h4 class="text-pc">Giải Pháp</h4>
+    </a>
+    <a href="video.html" style="text-decoration: none;">
+      <h4 class="text-pc">Videos</h4>
+    </a>
+  </div>
+</div>
+
+<div class="div-all">
+  <div class="mobile-layout">
+    <div class="mobile-logo-container">
+      <a href="/">
+        <img class="mobile-img" src="https://i.imgur.com/ZuVJwyk.jpeg" alt="12a1">
+      </a>
+      <div class="header-info">
+        <div class="title-header">Trái Đất Xanh</div>
+        <div class="des-header">Giải pháp cho tương lai</div>
+      </div>
+    </div>
+
+    <div class="menu-mobile">
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="vande.html">Vấn Đề</a>
+      <a href="giaiphap.html">Giải Pháp</a>
+      <a href="video.html">Videos</a>
+    </div>
+
+    <div class="marquee-container">
+      <marquee style="font-size: 16px; color: #27ae60; font-weight: 500;">Mỗi hành động nhỏ đều tạo nên sự khác biệt lớn. Cùng nhau chúng ta có thể xây dựng một tương lai bền vững cho Trái Đất...</marquee>
+    </div>
+
+    <div class="solution-banner">
+      <h3>🌱 HÀNH ĐỘNG NGAY HÔM NAY</h3>
+      <p>Các giải pháp thiết thực để bảo vệ môi trường</p>
+    </div>
+
+    <div class="section">
+      <div class="inline">
+        <h2 style="margin: 0 0 10px 0;">GIẢI PHÁP CHO BIẾN ĐỔI KHÍ HẬU</h2>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon" style="background-color: #e8f5e9; color: #27ae60;">
+          🌍
+        </div>
+        <h3 class="solution-title">Chuyển đổi năng lượng tái tạo</h3>
+        <p class="solution-desc">
+          Sử dụng năng lượng mặt trời, gió, thủy điện thay thế nhiên liệu hóa thạch. Đây là giải pháp quan trọng nhất để giảm phát thải khí nhà kính.
+        </p>
+        <ul class="step-list">
+          <li>Lắp đặt pin mặt trời trên mái nhà</li>
+          <li>Ưu tiên sử dụng điện từ nguồn tái tạo</li>
+          <li>Đầu tư vào công nghệ năng lượng sạch</li>
+        </ul>
+        <div>
+          <span class="benefit-tag">Giảm CO2</span>
+          <span class="benefit-tag">Tiết kiệm chi phí</span>
+          <span class="benefit-tag">Bền vững</span>
+        </div>
+        <div class="solution-stats">
+          <div class="stat-badge">
+            <div class="stat-number">-80%</div>
+            <div class="stat-text">Khí thải</div>
+          </div>
+          <div class="stat-badge">
+            <div class="stat-number">2050</div>
+            <div class="stat-text">Mục tiêu</div>
+          </div>
+          <button class="action-btn">Tìm hiểu thêm →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="inline-hd">
+        <h2 style="margin: 0 0 10px 0;">GIẢI PHÁP CHO RÁC THẢI NHỰA</h2>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon" style="background-color: #e3f2fd; color: #2196f3;">
+          ♻️
+        </div>
+        <h3 class="solution-title">Tuần hoàn và tái chế nhựa</h3>
+        <p class="solution-desc">
+          Xây dựng hệ thống tuần hoàn nhựa, giảm sản xuất nhựa mới và tăng cường tái chế hiệu quả.
+        </p>
+        <ul class="step-list">
+          <li>Phân loại rác tại nguồn</li>
+          <li>Ưu tiên sản phẩm tái chế</li>
+          <li>Hạn chế sử dụng nhựa dùng một lần</li>
+          <li>Ủng hộ các sáng kiến tái chế cộng đồng</li>
+        </ul>
+        <div>
+          <span class="benefit-tag">Giảm rác thải</span>
+          <span class="benefit-tag">Bảo vệ đại dương</span>
+          <span class="benefit-tag">Kinh tế tuần hoàn</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+             class="content-img" alt="Tái chế nhựa">
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="inline-hd">
+        <h2 style="margin: 0 0 10px 0;">GIẢI PHÁP CHO Ô NHIỄM KHÔNG KHÍ</h2>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon" style="background-color: #fff3e0; color: #ff9800;">
+          🌬️
+        </div>
+        <h3 class="solution-title">Giao thông xanh và trồng cây</h3>
+        <p class="solution-desc">
+          Phát triển giao thông công cộng, phương tiện điện và tăng cường trồng cây xanh đô thị.
+        </p>
+        <ul class="step-list">
+          <li>Sử dụng phương tiện công cộng</li>
+          <li>Chuyển sang xe đạp hoặc đi bộ</li>
+          <li>Trồng cây xanh tại nhà và cộng đồng</li>
+          <li>Ủng hộ xe điện và hybrid</li>
+        </ul>
+        <div>
+          <span class="benefit-tag">Không khí sạch</span>
+          <span class="benefit-tag">Sức khỏe tốt</span>
+          <span class="benefit-tag">Đô thị xanh</span>
+        </div>
+        <div class="solution-stats">
+          <div class="stat-badge">
+            <div class="stat-number">-50%</div>
+            <div class="stat-text">Bụi mịn</div>
+          </div>
+          <div class="stat-badge">
+            <div class="stat-number">1 tỷ</div>
+            <div class="stat-text">Cây mục tiêu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="inline-hd">
+        <h2 style="margin: 0 0 10px 0;">GIẢI PHÁP BẢO TỒN ĐA DẠNG SINH HỌC</h2>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon" style="background-color: #f3e5f5; color: #9c27b0;">
+          🦋
+        </div>
+        <h3 class="solution-title">Bảo vệ hệ sinh thái tự nhiên</h3>
+        <p class="solution-desc">
+          Thiết lập và quản lý hiệu quả các khu bảo tồn, phục hồi hệ sinh thái và ngăn chặn buôn bán động vật hoang dã.
+        </p>
+        <ul class="step-list">
+          <li>Hỗ trợ các khu bảo tồn thiên nhiên</li>
+          <li>Không tiêu thụ sản phẩm từ động vật hoang dã</li>
+          <li>Trồng cây bản địa trong vườn nhà</li>
+          <li>Tham gia các dự án phục hồi hệ sinh thái</li>
+        </ul>
+        <div>
+          <span class="benefit-tag">Bảo tồn loài</span>
+          <span class="benefit-tag">Cân bằng sinh thái</span>
+          <span class="benefit-tag">Di sản tự nhiên</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1558640476-437a2e9b7a2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+             class="content-img" alt="Bảo tồn động vật">
+      </div>
+    </div>
+
+    <div class="personal-action">
+      <h3 style="margin: 0 0 15px 0; color: #2e8b57;">HÀNH ĐỘNG CÁ NHÂN BẠN CÓ THỂ LÀM</h3>
+      <div class="action-grid">
+        <div class="action-item">
+          <h4><span class="check-icon">✓</span> Tiết kiệm điện</h4>
+          <p>Tắt đèn khi không sử dụng, dùng đèn LED, rút phích cắm thiết bị.</p>
+        </div>
+        <div class="action-item">
+          <h4><span class="check-icon">✓</span> Giảm nhựa</h4>
+          <p>Dùng túi vải, bình nước cá nhân, ống hút inox, mua sản phẩm không đóng gói.</p>
+        </div>
+        <div class="action-item">
+          <h4><span class="check-icon">✓</span> Di chuyển xanh</h4>
+          <p>Đi bộ, xe đạp, xe buýt thay vì xe máy/xe hơi cá nhân.</p>
+        </div>
+        <div class="action-item">
+          <h4><span class="check-icon">✓</span> Tiêu dùng có ý thức</h4>
+          <p>Chọn sản phẩm địa phương, hữu cơ, ít bao bì, từ công ty có trách nhiệm môi trường.</p>
+        </div>
+        <div class="action-item">
+          <h4><span class="check-icon">✓</span> Tiết kiệm nước</h4>
+          <p>Tắt vòi khi đánh răng, tái sử dụng nước, sửa chữa rò rỉ.</p>
+        </div>
+        <div class="action-item">
+          <h4><span class="check-icon">✓</span> Trồng cây xanh</h4>
+          <p>Trồng cây tại nhà, tham gia hoạt động trồng rừng cộng đồng.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="inline-tiilevd">
+        <h3 style="margin: 0 0 15px 0;">THỐNG KÊ TÁC ĐỘNG TÍCH CỰC</h3>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-item" style="border-top: 4px solid #2ecc71;">
+          <div class="stat-value" style="color: #2ecc71;">12.5%</div>
+          <div class="stat-label">Năng lượng tái tạo toàn cầu</div>
+        </div>
+        
+        <div class="stat-item" style="border-top: 4px solid #3498db;">
+          <div class="stat-value" style="color: #3498db;">9% → 15%</div>
+          <div class="stat-label">Tỷ lệ tái chế nhựa (mục tiêu 2025)</div>
+        </div>
+        
+        <div class="stat-item" style="border-top: 4px solid #f39c12;">
+          <div class="stat-value" style="color: #f39c12;">137 quốc gia</div>
+          <div class="stat-label">Cam kết Net Zero 2050</div>
+        </div>
+        
+        <div class="stat-item" style="border-top: 4px solid #9b59b6;">
+          <div class="stat-value" style="color: #9b59b6;">17%</div>
+          <div class="stat-label">Diện tích đất được bảo vệ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="inline-tiilevd">
+        <h3 style="margin: 0 0 15px 0;">HÌNH ẢNH GIẢI PHÁP THỰC TẾ</h3>
+      </div>
+      
+      <div class="div-taiche">
+        <img class="imgtaiche" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Năng lượng mặt trời">
+        <img class="imgtaiche" src="https://images.unsplash.com/photo-1589923186741-b7d59d6b2c4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Tái chế rác">
+        <img class="imgtaiche" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Xe điện">
+        <img class="imgtaiche" src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Trồng cây">
+      </div>
+    </div>
+
+    <div class="div-button">
+      <a href="vande.html" style="text-decoration: none;">
+        <button class="button-hdn">QUAY LẠI VẤN ĐỀ</button>
+      </a>
+      <a href="video.html" style="text-decoration: none;">
+        <button class="button-video">XEM VIDEO</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="desktop-layout">
+    <div class="desktop-phan-1">
+      <div class="marquee-container">
+        <marquee style="font-size: 14px; color: #27ae60; font-weight: 500;">Mỗi giải pháp nhỏ đều góp phần vào sự thay đổi lớn cho Trái Đất...</marquee>
+      </div>
+
+      <div class="solution-banner" style="padding: 15px;">
+        <h3 style="font-size: 16px; margin-bottom: 5px;">🌱 GIẢI PHÁP THIẾT THỰC</h3>
+        <p style="font-size: 13px;">Hành động ngay hôm nay cho ngày mai tươi sáng</p>
+      </div>
+
+      <div class="section">
+        <div class="inline">
+          <h3 style="margin: 0 0 10px 0; font-size: 18px;">GIẢI PHÁP NĂNG LƯỢNG</h3>
+        </div>
+        
+        <div class="solution-card" style="padding: 15px;">
+          <div class="solution-icon" style="background-color: #e8f5e9; color: #27ae60; width: 40px; height: 40px; font-size: 18px; margin-bottom: 10px;">
+            🌍
+          </div>
+          <h4 class="solution-title" style="font-size: 16px;">Năng lượng tái tạo</h4>
+          <p style="font-size: 13px; margin: 0 0 10px 0; line-height: 1.4;">
+            Chuyển đổi sang năng lượng mặt trời, gió, thủy điện. Giảm 80% khí thải.
+          </p>
+          <div style="margin-bottom: 10px;">
+            <span class="benefit-tag" style="font-size: 11px;">Giảm CO2</span>
+            <span class="benefit-tag" style="font-size: 11px;">Tiết kiệm</span>
+          </div>
+          <button class="action-btn" style="padding: 6px 12px; font-size: 12px;">Chi tiết →</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="personal-action" style="padding: 15px;">
+          <h4 style="margin: 0 0 10px 0; font-size: 16px; color: #2e8b57;">HÀNH ĐỘNG CÁ NHÂN</h4>
+          <div class="action-item" style="margin-bottom: 10px;">
+            <h4 style="font-size: 14px; margin: 0 0 5px 0;"><span class="check-icon">✓</span> Tiết kiệm điện</h4>
+            <p style="font-size: 12px; margin: 0;">Tắt đèn, dùng LED, rút phích cắm.</p>
+          </div>
+          <div class="action-item" style="margin-bottom: 10px;">
+            <h4 style="font-size: 14px; margin: 0 0 5px 0;"><span class="check-icon">✓</span> Giảm nhựa</h4>
+            <p style="font-size: 12px; margin: 0;">Túi vải, bình nước cá nhân.</p>
+          </div>
+          <div class="action-item">
+            <h4 style="font-size: 14px; margin: 0 0 5px 0;"><span class="check-icon">✓</span> Di chuyển xanh</h4>
+            <p style="font-size: 12px; margin: 0;">Đi bộ, xe đạp, xe buýt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="desktop-phan-2">
+      <div class="section">
+        <div class="inline-hd">
+          <h3 style="margin: 0 0 10px 0; font-size: 18px;">GIẢI PHÁP RÁC THẢI</h3>
+        </div>
+        
+        <div class="solution-card" style="padding: 15px;">
+          <div class="solution-icon" style="background-color: #e3f2fd; color: #2196f3; width: 40px; height: 40px; font-size: 18px; margin-bottom: 10px;">
+            ♻️
+          </div>
+          <h4 class="solution-title" style="font-size: 16px;">Tuần hoàn và tái chế</h4>
+          <p style="font-size: 13px; margin: 0 0 10px 0; line-height: 1.4;">
+            Phân loại rác, ưu tiên tái chế, hạn chế nhựa dùng một lần.
+          </p>
+          <ul class="step-list" style="font-size: 12px; margin: 0 0 10px 15px; padding: 0;">
+            <li>Phân loại tại nguồn</li>
+            <li>Hạn chế nhựa 1 lần</li>
+          </ul>
+          <div>
+            <span class="benefit-tag" style="font-size: 11px;">Giảm rác</span>
+            <span class="benefit-tag" style="font-size: 11px;">Bảo vệ biển</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="inline-hd">
+          <h3 style="margin: 0 0 10px 0; font-size: 18px;">GIẢI PHÁP KHÔNG KHÍ</h3>
+        </div>
+        
+        <div class="solution-card" style="padding: 15px;">
+          <div class="solution-icon" style="background-color: #fff3e0; color: #ff9800; width: 40px; height: 40px; font-size: 18px; margin-bottom: 10px;">
+            🌬️
+          </div>
+          <h4 class="solution-title" style="font-size: 16px;">Giao thông xanh</h4>
+          <p style="font-size: 13px; margin: 0 0 10px 0; line-height: 1.4;">
+            Sử dụng phương tiện công cộng, xe điện, trồng cây xanh đô thị.
+          </p>
+          <div class="solution-stats" style="margin-top: 10px; padding-top: 10px;">
+            <div class="stat-badge">
+              <div class="stat-number" style="font-size: 16px;">-50%</div>
+              <div class="stat-text" style="font-size: 11px;">Bụi mịn</div>
+            </div>
+            <button class="action-btn" style="padding: 6px 12px; font-size: 12px;">Chi tiết →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="div-taiche" style="justify-content: center; margin: 15px 0;">
+          <img class="imgtaiche" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-1.2.1&auto=format&fit=crop&w-150&q=80" alt="Năng lượng mặt trời">
+          <img class="imgtaiche" src="https://images.unsplash.com/photo-1589923186741-b7d59d6b2c4c?ixlib=rb-1.2.1&auto=format&fit=crop&w-150&q=80" alt="Tái chế rác">
+          <img class="imgtaiche" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-1.2.1&auto=format&fit=crop&w-150&q=80" alt="Xe điện">
+        </div>
+      </div>
+    </div>
+
+    <div class="desktop-phan-3">
+      <div class="section">
+        <div class="inline-hd">
+          <h3 style="margin: 0 0 10px 0; font-size: 18px;">GIẢI PHÁP BẢO TỒN</h3>
+        </div>
+        
+        <div class="solution-card" style="padding: 15px;">
+          <div class="solution-icon" style="background-color: #f3e5f5; color: #9c27b0; width: 40px; height: 40px; font-size: 18px; margin-bottom: 10px;">
+            🦋
+          </div>
+          <h4 class="solution-title" style="font-size: 16px;">Bảo vệ sinh thái</h4>
+          <p style="font-size: 13px; margin: 0 0 10px 0; line-height: 1.4;">
+            Hỗ trợ khu bảo tồn, không tiêu thụ động vật hoang dã, trồng cây bản địa.
+          </p>
+          <div>
+            <span class="benefit-tag" style="font-size: 11px;">Bảo tồn loài</span>
+            <span class="benefit-tag" style="font-size: 11px;">Cân bằng</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1558640476-437a2e9b7a2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
+               style="width:100%; height:100px; border-radius: 8px; object-fit: cover; margin-top: 10px;">
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="inline-hd">
+          <h3 style="margin: 0 0 10px 0; font-size: 18px;">THỐNG KÊ TÍCH CỰC</h3>
+        </div>
+        
+        <div class="stats-grid" style="grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="stat-item" style="border-top: 4px solid #2ecc71; padding: 15px;">
+            <div class="stat-value" style="font-size: 20px; color: #2ecc71;">12.5%</div>
+            <div class="stat-label" style="font-size: 12px;">Năng lượng tái tạo</div>
+          </div>
+          
+          <div class="stat-item" style="border-top: 4px solid #3498db; padding: 15px;">
+            <div class="stat-value" style="font-size: 20px; color: #3498db;">9% → 15%</div>
+            <div class="stat-label" style="font-size: 12px;">Tái chế nhựa</div>
+          </div>
+          
+          <div class="stat-item" style="border-top: 4px solid #f39c12; padding: 15px;">
+            <div class="stat-value" style="font-size: 20px; color: #f39c12;">137</div>
+            <div class="stat-label" style="font-size: 12px;">Quốc gia cam kết</div>
+          </div>
+          
+          <div class="stat-item" style="border-top: 4px solid #9b59b6; padding: 15px;">
+            <div class="stat-value" style="font-size: 20px; color: #9b59b6;">17%</div>
+            <div class="stat-label" style="font-size: 12px;">Đất được bảo vệ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="inline-hd">
+          <h3 style="margin: 0 0 10px 0; font-size: 18px;">TÁC ĐỘNG CỦA BẠN</h3>
+        </div>
+        
+        <div class="hangtb" style="margin-bottom: 15px;">
+          <div class="thongbao" style="border-top-color: #2ecc71; height: 80px;">
+            <div style="text-align: center;">
+              <p style="font-size: 20px; font-weight: 700; margin: 15px 0 5px 0; color: #2ecc71;">1 tấn</p>
+              <p style="font-size: 12px; margin: 0; color: #666;">CO2 giảm/năm</p>
+            </div>
+          </div>
+          
+          <div class="thongbao" style="border-top-color: #f39c12; height: 80px;">
+            <div style="text-align: center;">
+              <p style="font-size: 20px; font-weight: 700; margin: 15px 0 5px 0; color: #f39c12;">50kg</p>
+              <p style="font-size: 12px; margin: 0; color: #666;">Nhựa giảm/năm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="div-button" style="justify-content: center; margin: 20px 0 0 0;">
+        <a href="vande.html" style="text-decoration: none;">
+          <button class="button-hdn" style="width: 140px;">VẤN ĐỀ</button>
+        </a>
+        <a href="video.html" style="text-decoration: none;">
+          <button class="button-video" style="width: 140px;">VIDEO</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-info">
+      <div class="footer-logo">
+        <div class="logo-icon">🌱</div>
+        <div class="logo-text">12A1NS2</div>
+      </div>
+      <p class="tagline">"Sống xanh không khó chỉ cần bạn thực sự muốn."</p>
+      <p style="color: #c1e1c1; font-size: 14px;">Website bảo vệ môi trường của lớp 12A1 - Trường THPT Vĩnh Trạch</p>
+    </div>
+    
+    <div class="footer-contact">
+      <h3>Liên Hệ</h3>
+      <div class="contact-item">
+        <span class="contact-icon">☎️</span>
+        <span>0325 272 884</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">✉️</span>
+        <span>12a1nhom2@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">🏫</span>
+        <span>THPT Vĩnh Trạch</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">👥</span>
+        <span>Lớp 12A1 - Tổ 2</span>
+      </div>
+    </div>
+    
+    <div class="footer-members">
+      <h3>Thành Viên</h3>
+      <div class="members-list">
+        <div class="member">Hồ Văn Hoà</div>
+        <div class="member">Trần Thị Hà</div>
+        <div class="member">Nguyễn Thành Đạt</div>
+        <div class="member">Phan Đoàn Huy Ngọc</div>
+        <div class="member">Từ Ngọc Ngân</div>
+        <div class="member">Nguyễn Hiếu Nghĩa</div>
+        <div class="member">Nguyễn Lê Thành Nhân</div>
+        <div class="member">Phan Lữ Kim Hoa</div>
+        <div class="member">Nguyễn Thị Huỳnh Như</div>
+        <div class="member">Trần Phước Long</div>
+        <div class="member">Trần Thị Mỹ Linh</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="copyright">
+      © 2026 12A1 Nhóm 2 | THPT Vĩnh Trạch
+    </div>
+    <div class="social-links">
+      <a href="#" class="social-link">1</a>
+      <a href="#" class="social-link">2</a>
+      <a href="#" class="social-link">A</a>
+      <a href="#" class="social-link">1</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
