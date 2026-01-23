@@ -589,6 +589,8 @@ textarea:focus {
   .pc-container {
     display: none;
   }
+	.banner-pc{
+		display: none;}
   
   .mobile-logo-container {
     display: flex;
@@ -810,4 +812,5 @@ textarea:focus {
 			height: 300px;
 		  }
 }
+
 
