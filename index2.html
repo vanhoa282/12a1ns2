@@ -5,128 +5,163 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bảo Vệ Môi Trường - Hành Động Hôm Nay, Tương Lai Ngày Mai</title>
 <style>
+  body {
+    margin: 0;
+    font-family: Arial;
+    background: #f9f9f9;
+  }
+  
   .banner {
-    background: url("img/hinh-nen-PowerPoint-bao-ve-moi-truong-1.jpg
-") no-repeat center center;
+    background: url("img/hinh-nen-PowerPoint-bao-ve-moi-truong-1.jpg") center;
     background-size: cover; 
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-    text-align: center !important;
-    color: white !important;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-.slogan {
-    background-color: #CCFF99 !important;
-    text-align: center !important;
- 	width: 100%;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.slogan-h2{
-    font-size: 120%;
-}
-.row {
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .banner h1 {
+    background: rgba(0,100,0,0.7);
+    padding: 15px;
+    display: inline-block;
+    border-radius: 8px;
+  }
+  
+  .slogan {
+    background: #CCFF99;
+    padding: 30px 20px;
+  }
+  
+  .row {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: -1px;  
-    max-width: 100%;
-    padding-right: 3rem;
-    padding-left: 3rem;
-}
-.block_3 {
-    flex: 0 0 auto;
-    width: 33.33333%;
-}
-div#b3a:hover{
+    width: 100%;
+  }
+  
+  .block_3 {
+    width: 33.33%;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .block_3:hover {
     transform: scale(1.05);
     transition: 0.3s;
-    color: #2E8B57;
-}
-div#b3b:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
-    color: #2E8B57;
-}
-div#b3c:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
-    color: #2E8B57;
-}
-table
-{
-	width: 90%;
-	margin: 0 auto;
-}
-.cell_img {
-	width: 30%;
-}
-.cell_text {
-	width: 50%; padding-left: 5rem;
-}
-.img {
-	width: 100%; 
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
-}
-.img_tv {
-    width: 50%; 
-    height: 50%;
-    margin: 0 auto;
-}
-.menu {
-	font-size:120%; 
-	text-decoration: none;
-}
-.cell {
-	text-align: justify; 
-	padding: 1.5em;
-}
-footer {
-	background-color: #CCFF66; 
-	margin: 1px; 
-	padding: 20px;
-}
-.link {
-	color: #228B22; 
-	text-align: left;
-	text-decoration: none;
-	font-weight: bold;
-}
-a:hover{
+  }
+  
+  .content {
+    width: 90%;
+    margin: 30px auto;
+  }
+  
+  .item {
+    display: flex;
+    margin: 30px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .text-cell {
+    width: 60%;
+    padding: 20px;
+  }
+  
+  .img-cell {
+    width: 40%;
+  }
+  
+  .img-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-box {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background: #f0fff0;
+  }
+  
+  .gallery {
+    background: #F0FFF0;
+    padding: 30px 20px;
+    margin-top: 30px;
+  }
+  
+  .gallery .row {
+    justify-content: center;
+  }
+  
+  .gallery-item {
+    width: 25%;
+    padding: 10px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background: #CCFF66;
+    padding: 30px 20px;
+    margin-top: 30px;
+  }
+  
+  .link {
+    color: #228B22;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .link:hover {
     color: #32CD32;
     text-decoration: underline;
-}
-.video-container {
-    text-align: center;
-    margin: 2rem 0;
-}
-.video-title {
-    font-size: 1.5rem;
-    color: #2E8B57;
-    margin-bottom: 1rem;
-}
+  }
+  
+  /* CSS cho nút Giao diện mới */
+  .new-design-btn {
+    display: inline-block;
+    background-color: #2E8B57;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .new-design-btn:hover {
+    background-color: #32CD32;
+    color: white;
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>
 <header>
 	<div class="banner">
-		<h1><span style="background-color: rgba(0,100,0,0.7); padding: 10px 20px; border-radius: 10px;">Hành Động Xanh - Trái Đất Sạch</span></h1>
-		<p style="font-size: 1.2rem; margin-top: 1rem; background-color: rgba(0,100,0,0.7); padding: 5px 10px; border-radius: 5px; display: inline-block;">Cùng chung tay bảo vệ môi trường sống của chúng ta</p>
+		<h1>Hành Động Xanh - Trái Đất Sạch</h1>
+		<p style="background: rgba(0,100,0,0.7); padding: 10px; border-radius: 5px; display: inline-block;">Cùng chung tay bảo vệ môi trường sống của chúng ta</p>
+		<br>
+		<!-- Nút Giao diện mới -->
+		<a href="https://12a1ns2.pages.dev/" class="new-design-btn" target="_blank">Giao diện mới</a>
 	</div>
 	<div class="slogan">
 		<div class="row">
-			<div id="b3a" class="block_3">
+			<div class="block_3">
 				<h2 style="color: #2E8B57;">♻️ GIẢM THẢI</h2>
 				<p>Giảm rác thải nhựa, tiết kiệm tài nguyên</p>
 			</div>
-			<div id="b3b" class="block_3">
+			<div class="block_3">
 				<h2 style="color: #2E8B57;">🌳 TÁI TẠO</h2>
 				<p>Trồng cây xanh, phục hồi hệ sinh thái</p>
 			</div>
-			<div id="b3c"class="block_3">
+			<div class="block_3">
 				<h2 style="color: #2E8B57;">💡 SỐNG XANH</h2>
 				<p>Thay đổi thói quen, sống thân thiện môi trường</p>
 			</div>	
@@ -134,106 +169,108 @@ a:hover{
 	</div>
 </header>
 	
-<div class="video-container">
-	<div class="video-title">📺 Video: Hành Trình Cứu Lấy Đại Dương</div>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/emqL5y4Zb9Y?si=EOPMy0ISPPqG3WZe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-box">
+	<div style="font-size: 20px; color: #2E8B57; margin-bottom: 15px;">📺 Video: Hành Trình Cứu Lấy Đại Dương</div>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/emqL5y4Zb9Y?si=EOPMy0ISPPqG3WZe" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<table>
-	<tr>
-		<td class="cell_text">
-			<h2 style="color: #2E8B57;">🌍 THỰC TRẠNG MÔI TRƯỜNG HIỆN NAY</h2>
-<ul>
-  <li><strong>Ô nhiễm không khí:</strong> Chất lượng không khí tại các thành phố lớn thường xuyên ở mức báo động, ảnh hưởng nghiêm trọng đến sức khỏe con người.</li>
-  <li><strong>Rác thải nhựa đại dương:</strong> Mỗi năm có khoảng 8 triệu tấn rác nhựa đổ ra đại dương, đe dọa nghiêm trọng đến hệ sinh thái biển.</li>
-  <li><strong>Biến đổi khí hậu:</strong> Nhiệt độ trái đất tăng, băng tan, mực nước biển dâng cao gây ra nhiều thiên tai bất thường.</li>
-  <li><strong>Suy thoái đa dạng sinh học:</strong> Nhiều loài động thực vật đứng trước nguy cơ tuyệt chủng do mất môi trường sống.</li>
-</ul>
-		</td>
-		<td class="cell_img"><img src="img/hinh-anh-oi-nhiem-moi-truong-dat-nuoc-khong-khi-o-viet-nam.jpg
-" alt="Ô nhiễm môi trường" class="img"></td>
-	</tr>
-	<tr>
-		<td class="cell_img"><img src="img/binhtho-1615174250802617381579.jpg
-" alt="Hoạt động trồng cây" class="img"></td>
-		<td class="cell_text">
-			<h2 style="color: #2E8B57;">🌱 HÀNH ĐỘNG THIẾT THỰC BẢO VỆ MÔI TRƯỜNG</h2>
-<ul>
-  <li><strong>Phân loại rác tại nguồn:</strong> Tách riêng rác tái chế, rác hữu cơ và rác thải khác để tăng hiệu quả xử lý.</li>
-  <li><strong>Hạn chế sử dụng đồ nhựa dùng một lần:</strong> Mang theo bình nước cá nhân, túi vải khi đi mua sắm, ống hút tre/inox.</li>
-  <li><strong>Tiết kiệm năng lượng:</strong> Tắt đèn và thiết bị điện khi không sử dụng, sử dụng thiết bị tiết kiệm điện.</li>
-  <li><strong>Tham gia trồng cây xanh:</strong> Mỗi cây xanh được trồng là một lá phổi xanh cho trái đất.</li>
-  <li><strong>Sử dụng phương tiện công cộng:</strong> Giảm phương tiện cá nhân để giảm khí thải ra môi trường.</li>
-</ul>
-			<a href="hanh_dong.html" class="link">Xem thêm các hành động cụ thể →</a>
-		</td>
-	</tr>
-	<tr>
-		<td class="cell_text">
-		<h2 style="color: #2E8B57;">🏆 DỰ ÁN BẢO VỆ MÔI TRƯỜNG TIÊU BIỂU</h2>
-<ul>
-  <li><strong>Chương trình "Đổi rác lấy quà":</strong> Thu gom rác tái chế đổi lấy cây xanh hoặc vật phẩm thân thiện môi trường.</li>
-  <li><strong>Chiến dịch "Làm sạch bãi biển":</strong> Huy động hàng nghìn tình nguyện viên dọn dẹp rác thải tại các bãi biển trên khắp cả nước.</li>
-  <li><strong>Dự án "Rừng cộng đồng":</strong> Trồng và chăm sóc rừng phòng hộ với sự tham gia của người dân địa phương.</li>
-  <li><strong>Chương trình "Trường học xanh":</strong> Xây dựng mô hình trường học không rác thải nhựa, có vườn cây xanh.</li>
-</ul>
-			<a href="du_an.html" class="link">Tham gia các dự án →</a>
-		</td>
-		<td class="cell_img"><img src="img/photo-1569163139599-0f4517e36f51.jpg
-" alt="Dự án môi trường" class="img"></td>
-	</tr>
-</table>
+<div class="content">
+  <div class="item">
+    <div class="text-cell">
+      <h2 style="color: #2E8B57;">🌍 THỰC TRẠNG MÔI TRƯỜNG HIỆN NAY</h2>
+      <ul>
+        <li><strong>Ô nhiễm không khí:</strong> Chất lượng không khí tại các thành phố lớn thường xuyên ở mức báo động.</li>
+        <li><strong>Rác thải nhựa đại dương:</strong> Mỗi năm có khoảng 8 triệu tấn rác nhựa đổ ra đại dương.</li>
+        <li><strong>Biến đổi khí hậu:</strong> Nhiệt độ trái đất tăng, băng tan, mực nước biển dâng cao.</li>
+        <li><strong>Suy thoái đa dạng sinh học:</strong> Nhiều loài động thực vật đứng trước nguy cơ tuyệt chủng.</li>
+      </ul>
+    </div>
+    <div class="img-cell">
+      <img src="img/hinh-anh-oi-nhiem-moi-truong-dat-nuoc-khong-khi-o-viet-nam.jpg" alt="Ô nhiễm môi trường">
+    </div>
+  </div>
+  
+  <div class="item">
+    <div class="img-cell">
+      <img src="img/binhtho-1615174250802617381579.jpg" alt="Hoạt động trồng cây">
+    </div>
+    <div class="text-cell">
+      <h2 style="color: #2E8B57;">🌱 HÀNH ĐỘNG THIẾT THỰC BẢO VỆ MÔI TRƯỜNG</h2>
+      <ul>
+        <li><strong>Phân loại rác tại nguồn:</strong> Tách riêng rác tái chế, rác hữu cơ.</li>
+        <li><strong>Hạn chế sử dụng đồ nhựa dùng một lần:</strong> Mang theo bình nước cá nhân, túi vải.</li>
+        <li><strong>Tiết kiệm năng lượng:</strong> Tắt đèn và thiết bị điện khi không sử dụng.</li>
+        <li><strong>Tham gia trồng cây xanh:</strong> Mỗi cây xanh là một lá phổi xanh cho trái đất.</li>
+      </ul>
+      <a href="hanh_dong.html" class="link">Xem thêm các hành động cụ thể →</a>
+    </div>
+  </div>
+  
+  <div class="item">
+    <div class="text-cell">
+      <h2 style="color: #2E8B57;">🏆 DỰ ÁN BẢO VỆ MÔI TRƯỜNG TIÊU BIỂU</h2>
+      <ul>
+        <li><strong>Chương trình "Đổi rác lấy quà":</strong> Thu gom rác tái chế đổi lấy cây xanh.</li>
+        <li><strong>Chiến dịch "Làm sạch bãi biển":</strong> Dọn dẹp rác thải tại các bãi biển.</li>
+        <li><strong>Dự án "Rừng cộng đồng":</strong> Trồng và chăm sóc rừng phòng hộ.</li>
+        <li><strong>Chương trình "Trường học xanh":</strong> Xây dựng mô hình trường học không rác thải nhựa.</li>
+      </ul>
+      <a href="du_an.html" class="link">Tham gia các dự án →</a>
+    </div>
+    <div class="img-cell">
+      <img src="img/photo-1569163139599-0f4517e36f51.jpg" alt="Dự án môi trường">
+    </div>
+  </div>
+</div>
 
-<!-- Thêm phần hình ảnh hoạt động -->
-<div style="background-color: #F0FFF0; padding: 3rem; margin-top: 2rem;">
-	<h2 style="text-align: center; color: #2E8B57;">📸 HÌNH ẢNH HOẠT ĐỘNG BẢO VỆ MÔI TRƯỜNG</h2>
-	<div class="row" style="margin-top: 2rem;">
-		<div style="width: 25%; padding: 10px;">
-			<img src="images/hoat_dong_1.jpg" alt="Dọn rác bãi biển" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-			<p style="text-align: center; margin-top: 10px;"><strong>Dọn rác bãi biển</strong></p>
-		</div>
-		<div style="width: 25%; padding: 10px;">
-			<img src="images/hoat_dong_2.jpg" alt="Trồng cây xanh" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-			<p style="text-align: center; margin-top: 10px;"><strong>Trồng cây phủ xanh</strong></p>
-		</div>
-		<div style="width: 25%; padding: 10px;">
-			<img src="images/hoat_dong_3.jpg" alt="Đổi rác lấy quà" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-			<p style="text-align: center; margin-top: 10px;"><strong>Đổi rác tái chế</strong></p>
-		</div>
-		<div style="width: 25%; padding: 10px;">
-			<img src="images/hoat_dong_4.jpg" alt="Giáo dục môi trường" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-			<p style="text-align: center; margin-top: 10px;"><strong>Giáo dục cộng đồng</strong></p>
-		</div>
-	</div>
+<div class="gallery">
+  <h2 style="text-align: center; color: #2E8B57;">📸 HÌNH ẢNH HOẠT ĐỘNG</h2>
+  <div class="row">
+    <div class="gallery-item">
+      <img src="images/hoat_dong_1.jpg" alt="Dọn rác bãi biển">
+      <p style="text-align: center;"><strong>Dọn rác bãi biển</strong></p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/hoat_dong_2.jpg" alt="Trồng cây xanh">
+      <p style="text-align: center;"><strong>Trồng cây phủ xanh</strong></p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/hoat_dong_3.jpg" alt="Đổi rác lấy quà">
+      <p style="text-align: center;"><strong>Đổi rác tái chế</strong></p>
+    </div>
+    <div class="gallery-item">
+      <img src="images/hoat_dong_4.jpg" alt="Giáo dục môi trường">
+      <p style="text-align: center;"><strong>Giáo dục cộng đồng</strong></p>
+    </div>
+  </div>
 </div>
 
 <footer>
-	<div class="row">
-		<div style="width: 60%;">
-			<h3 style="color: #2E8B57;">📞 LIÊN HỆ THAM GIA</h3>
-			<ul>
-				<li>📍 Địa chỉ: Số 123, Đường Xanh, Quận Sạch, TP. Môi Trường</li>
-				<li>📞 Hotline: 1900 100 200 (Miễn phí)</li>
-				<li>📧 Email: hanhdongxanh@moitruong.vn</li>
-				<li>🌐 Website: <a href="index.html" class="link">www.hanhdongxanh.vn</a></li>
-				<li>📱 Fanpage: <a href="https://facebook.com/hanhdongxanh" class="link">fb.com/hanhdongxanh</a></li>
-			</ul>
-		</div>
-		<div style="width: 10%;"></div>
-		<div style="width: 30%;">
-		<h3 style="color: #2E8B57;">🔗 THÔNG TIN HỮU ÍCH</h3>
-			<ul>
-				<li><a href="hanh_dong.html" class="link">📋 50 Hành động xanh dễ thực hiện</a></li>
-				<li><a href="du_an.html" class="link">📅 Lịch hoạt động tháng này</a></li>
-				<li><a href="tai_lieu.html" class="link">📚 Tài liệu giáo dục môi trường</a></li>
-				<li><a href="tin_tuc.html" class="link">📰 Tin tức môi trường mới nhất</a></li>
-			</ul>
-		</div>
-	</div>
-	<div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 2px solid #2E8B57;">
-		<p style="color: #2E8B57; font-weight: bold;">🌍 MỖI HÀNH ĐỘNG NHỎ TẠO NÊN THAY ĐỔI LỚN 🌍</p>
-		<p style="color: #555; font-size: 0.9em;">© 2024 - Chiến dịch "Hành động xanh" | Vì một Việt Nam xanh - sạch - đẹp</p>
-	</div>
+  <div class="row">
+    <div style="width: 60%;">
+      <h3 style="color: #2E8B57;">📞 LIÊN HỆ THAM GIA</h3>
+      <ul>
+        <li>📍 Địa chỉ: Số 123, Đường Xanh, Quận Sạch, TP. Môi Trường</li>
+        <li>📞 Hotline: 1900 100 200 (Miễn phí)</li>
+        <li>📧 Email: hanhdongxanh@moitruong.vn</li>
+        <li>🌐 Website: <a href="index.html" class="link">www.hanhdongxanh.vn</a></li>
+      </ul>
+    </div>
+    <div style="width: 40%;">
+      <h3 style="color: #2E8B57;">🔗 THÔNG TIN HỮU ÍCH</h3>
+      <ul>
+        <li><a href="hanh_dong.html" class="link">📋 50 Hành động xanh</a></li>
+        <li><a href="du_an.html" class="link">📅 Lịch hoạt động</a></li>
+        <li><a href="tai_lieu.html" class="link">📚 Tài liệu giáo dục</a></li>
+      </ul>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 2px solid #2E8B57;">
+    <p style="color: #2E8B57; font-weight: bold;">🌍 MỖI HÀNH ĐỘNG NHỎ TẠO NÊN THAY ĐỔI LỚN 🌍</p>
+    <p style="color: #555;">© 2024 - Chiến dịch "Hành động xanh"</p>
+    <!-- Nút Giao diện mới ở footer -->
+    <a href="https://12a1ns2.pages.dev/" class="new-design-btn" target="_blank" style="margin-top: 10px;">Xem Giao diện mới</a>
+  </div>
 </footer>
 </body>
 </html>
