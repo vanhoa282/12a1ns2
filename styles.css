@@ -700,14 +700,15 @@ textarea:focus {
   .members-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .banner-pc{
-    display: none;
-  }
+
 }
 
 @media only screen and (min-width: 769px) {
   .pc-container {
     display: flex;
+  }
+  .banner-pc {
+  display: block;
   }
   
   .mobile-logo-container,
@@ -848,5 +849,6 @@ textarea:focus {
   }
 
 }
+
 
 
