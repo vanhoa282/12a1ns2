@@ -1,6 +1,9 @@
 html{
   scroll-behavior: smooth;
 }
+.banner-pc {
+  display: block;
+}
   
 body{
   background-color: #fafafa ;
@@ -845,4 +848,5 @@ textarea:focus {
   }
 
 }
+
 
