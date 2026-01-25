@@ -697,6 +697,9 @@ textarea:focus {
   .members-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .banner-pc{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -840,4 +843,6 @@ textarea:focus {
   .desktop-layout .videos {
     height: 300px;
   }
+
 }
+
